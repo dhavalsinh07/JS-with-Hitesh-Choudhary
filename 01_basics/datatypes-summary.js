@@ -15,7 +15,7 @@ let userEmail;
 const id = Symbol('123');
 const anotherId = Symbol('123');
 
-console.log(id === anotherId);
+// console.log(id === anotherId);
 
 const bigNumber = 4545454548465645n;
 
@@ -28,14 +28,15 @@ const bigNumber = 4545454548465645n;
 
 const heros = ["shaktiman", "thor", "spiderman", "batman"]
 
-let myObj = {
-    name: Dhavalsinh,
-    age: 21,
-}
+// let myObj = {
+//     name: Dhavalsinh,
+//     age: 21,
+// }
 
 const myFunction = function() {
-    console.log("Hello World");
+    // console.log("Hello World");
 }
+
 // all non-premitive type = object
 
 // and use ACMA script 
@@ -44,3 +45,27 @@ const myFunction = function() {
 //      the value they hold at runtime and can change throughout the program as we assign different values to them.
 //    While typescript is statically typed language
 
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack(Premitive) , Heap(Non-Premitive)
+
+let myYoutubeName = "dhavalsinhsolankicom"
+
+let anotherName = myYoutubeName;
+anotherName = "chaiorcode";
+
+console.log(myYoutubeName);
+console.log(anotherName);
+
+let userOne = {
+    email : "user@google.com",
+    upi : "user@ybl"
+}
+
+let userTwo = userOne;
+
+userTwo.email = "ncsjn@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
