@@ -48,6 +48,37 @@ function loginUserMessage (username){
 }
 
 // console.log(loginUserMessage("hitesh"));
-console.log(loginUserMessage());         // In these case the value is undefined not a null
+// console.log(loginUserMessage());         // In these case the value is undefined not a null
 
 
+
+
+function calculateCartPrice (val1, val2, ...num1) {                  // ... is a rest operator
+    return num1
+}
+
+console.log(calculateCartPrice(200, 400, 500, 2000));
+//result of ...num1 => [ 200, 400, 500, 2000 ]
+
+//result of val1,val2, ...num1 is => [ 500, 2000 ]
+
+
+const user = {
+    username: "Dhaval",
+    price : 199,
+}
+
+function handleObject (anyobject) {
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+
+}
+handleObject(user)
+
+
+const myNewArray = [200, 400, 349, 599]
+
+function returnSecondValue (getArray) {
+    return getArray[1]
+}
+
+console.log(returnSecondValue(myNewArray));
