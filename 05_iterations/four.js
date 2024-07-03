@@ -24,5 +24,7 @@ map.set('AUS', 'Austalia')
 map.set('GER', 'Germany')
 
 for (const key in map) {
-    console.log(key);                           // there is a error/ //bz map is not iterable/ // there are other methods for use this
+    // console.log(key);                           // there is a error/ // // there are other methods for use this
 }
+
+
