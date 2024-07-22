@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Events</title>
 </head>
-<body>
+<body style="background-color: #414141; color: ali;">
     <h2>Amazing image</h2>
     <div >
         <ul id="images">
@@ -18,5 +18,67 @@
         </ul>
     
 </body>
-<script src="eventbasics.js"></script>
+
+<!-- In Javascript all events run sequencialy
+ but there is an insequential  -->
+<script>
+// document.getElementById('owl').onclick = function () {
+//     alert('owl clicked')
+// }
+
+// attachEvent()
+// jQuery - on
+
+// By Default in JS in addEventListner the false is present
+
+// document.getElementById('owl').addEventListener('click', function(e){
+//     console.log(e);
+// },false)
+
+// learn byself
+
+// type, timestamp, defaultPrevented
+// target, toElement, srcElement, currentTarget
+// clientX, clientY, screenX, screenY
+// altKey, ctrlKey, shiftKey, keyCode
+
+// document.getElementById('images').addEventListener('click', function(e){
+//     console.log('click inside the ul');
+// }, false)
+
+// document.getElementById('owl').addEventListener('click', function(e){
+//     console.log('owl clicked');
+//     e.stopPropagation()
+// }, false)
+
+
+// // Event Propogation
+// // Event Propogation have two context - 1) eventBubling and 2) eventCapturing
+
+// // mostly used eventBubling means false value which is byDefault
+
+// // In true is called as capturingEvent 
+//         //  in this top to bottom is run
+
+
+// document.getElementById('google').addEventListener('click', function(e){
+//     console.log('google clicked');
+//     e.stopPropagation()
+//     e.preventDefault()
+// }, false)
+
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+        
+
+        // or
+        // removeIt.parentNode.removeChild(removeIt)
+    }, false)
+</script>
 </html>
