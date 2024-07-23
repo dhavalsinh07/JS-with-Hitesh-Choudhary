@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+
+    <button id="stop">stop</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log('Dhaval');
+    // }, 2000)
+
+    // other 
+
+    // const sayDhaval = function(){
+    //     console.log('Dhaval');
+    // }
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML ='Best Js Series'
+    }
+
+    // setTimeout(changeText, 4000)
+// If i want to stop the timeout than use clearTimeout 
+
+const changeMe = setTimeout(changeText, 4000)
+
+document.querySelector('#stop').
+addEventListener('click', function(){
+    clearTimeout(changeMe);
+    console.log('STOPPED'); 
+});
+
+
+
+    // setTimeout(sayDhaval, 2000);
+</script>
+</html>
